@@ -14,6 +14,8 @@
 		3CAC34612288D592005826FE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC345F2288D592005826FE /* MapViewController.swift */; };
 		3CAC34622288D592005826FE /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAC34602288D592005826FE /* MapViewController.xib */; };
 		3CAC34642288D5A1005826FE /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC34632288D5A1005826FE /* MapViewModel.swift */; };
+		3CCB8B60228A518A0047C609 /* BRServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB8B5F228A518A0047C609 /* BRServices.swift */; };
+		3CCB8B64228A58D20047C609 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCB8B63228A58D20047C609 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3CAC345F2288D592005826FE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3CAC34602288D592005826FE /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		3CAC34632288D5A1005826FE /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		3CCB8B5F228A518A0047C609 /* BRServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRServices.swift; sourceTree = "<group>"; };
+		3CCB8B63228A58D20047C609 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCB8B64228A58D20047C609 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,7 @@
 			children = (
 				3CAC343D2288CA2C005826FE /* BeerMe */,
 				3CAC343C2288CA2C005826FE /* Products */,
+				3CCB8B62228A58D20047C609 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +105,7 @@
 		3CCB8B59228A49010047C609 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				3CCB8B5E228A517A0047C609 /* Services */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -118,6 +125,22 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		3CCB8B5E228A517A0047C609 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3CCB8B5F228A518A0047C609 /* BRServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3CCB8B62228A58D20047C609 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CCB8B63228A58D20047C609 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,6 +151,7 @@
 				3CAC34372288CA2C005826FE /* Sources */,
 				3CAC34382288CA2C005826FE /* Frameworks */,
 				3CAC34392288CA2C005826FE /* Resources */,
+				3CCB8B61228A58310047C609 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -185,6 +209,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CCB8B61228A58310047C609 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3CAC34372288CA2C005826FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -193,6 +238,7 @@
 				3CAC34612288D592005826FE /* MapViewController.swift in Sources */,
 				3CAC343F2288CA2C005826FE /* AppDelegate.swift in Sources */,
 				3CAC34642288D5A1005826FE /* MapViewModel.swift in Sources */,
+				3CCB8B60228A518A0047C609 /* BRServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +386,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYNB75QGUJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BeerMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -358,6 +408,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYNB75QGUJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BeerMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
