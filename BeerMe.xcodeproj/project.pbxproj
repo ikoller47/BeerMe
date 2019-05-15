@@ -14,6 +14,7 @@
 		3CAC34612288D592005826FE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC345F2288D592005826FE /* MapViewController.swift */; };
 		3CAC34622288D592005826FE /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAC34602288D592005826FE /* MapViewController.xib */; };
 		3CAC34642288D5A1005826FE /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC34632288D5A1005826FE /* MapViewModel.swift */; };
+		3CB48FF9228B9047002307C9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB48FF8228B9047002307C9 /* DataStore.swift */; };
 		3CCB8B60228A518A0047C609 /* BRServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB8B5F228A518A0047C609 /* BRServices.swift */; };
 		3CCB8B64228A58D20047C609 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCB8B63228A58D20047C609 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		3CAC345F2288D592005826FE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3CAC34602288D592005826FE /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		3CAC34632288D5A1005826FE /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		3CB48FF8228B9047002307C9 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		3CCB8B5F228A518A0047C609 /* BRServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRServices.swift; sourceTree = "<group>"; };
 		3CCB8B63228A58D20047C609 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,14 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		3CB48FF7228B8F59002307C9 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				3CB48FF8228B9047002307C9 /* DataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
 		3CCB8B58228A48F90047C609 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		3CCB8B59228A49010047C609 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				3CB48FF7228B8F59002307C9 /* DataStore */,
 				3CCB8B5E228A517A0047C609 /* Services */,
 			);
 			path = Managers;
@@ -238,6 +249,7 @@
 				3CAC34612288D592005826FE /* MapViewController.swift in Sources */,
 				3CAC343F2288CA2C005826FE /* AppDelegate.swift in Sources */,
 				3CAC34642288D5A1005826FE /* MapViewModel.swift in Sources */,
+				3CB48FF9228B9047002307C9 /* DataStore.swift in Sources */,
 				3CCB8B60228A518A0047C609 /* BRServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
