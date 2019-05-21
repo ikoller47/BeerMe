@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+protocol MapViewModelProtocol {
+    
+}
+
+class MapViewModel: MapViewModelProtocol {
+    
+    // MARK: - Properties
+    
+    private let services: LocationServices
+    private let coordinator: MapViewModelDelegate
+    
+    // MARK: Initialization
+    
+    init(services: LocationServices, coordinator: MapViewModelDelegate) {
+        self.services = services
+        self.coordinator = coordinator
+    }
+}
