@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol MapViewModelProtocol {
     
@@ -16,13 +17,28 @@ class MapViewModel: MapViewModelProtocol {
     
     // MARK: - Properties
     
-    private let services: LocationServices
-    private let coordinator: MapViewModelDelegate
+    private let locationsManager: LocationsManager
+    private let coordinator: MapCoordinatorProtocol
+    private var locations: [MapLocationViewModel]?
     
     // MARK: Initialization
     
-    init(services: LocationServices, coordinator: MapViewModelDelegate) {
-        self.services = services
+    init(locationsManager: LocationsManager, coordinator: MapCoordinatorProtocol) {
+        self.locationsManager = locationsManager
         self.coordinator = coordinator
+        
+        getLocations()
+    }
+    
+    func getLocations() {
+        locationsManager.getLocationsFor(city: "Chicago"){ locations, error in
+            guard let locations = locations else {
+                return
+            }
+            
+//            self.locations = locations.map ({ (location) -> MapLocationViewModel in
+//                MapLocationViewModel(model: location, coordinator: self.coordinator)
+//            })
+        }
     }
 }

@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="BeerMe" customModuleProvider="target">
             <connections>
+                <outlet property="mapView" destination="60D-sw-viw" id="XvC-5a-gGL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +20,17 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="60D-sw-viw">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                </mapView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="60D-sw-viw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7YS-Db-1Wr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="60D-sw-viw" secondAttribute="trailing" id="8Ke-j0-cYX"/>
+                <constraint firstItem="60D-sw-viw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Njb-Ge-wDd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="60D-sw-viw" secondAttribute="bottom" id="lhb-Fv-aoo"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>

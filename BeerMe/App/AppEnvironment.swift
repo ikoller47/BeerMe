@@ -13,8 +13,10 @@ class AppEnvironment {
     // MARK: - Properties
     
     let services: LocationServices
+    let locationsManager: LocationsManager
     
     init(appSettings: AppSettings) {
-        self.services = LocationServices()
+        self.services = LocationServices(baseURL: appSettings.servicesURL)
+        self.locationsManager = LocationsManager(services: services)
     }
 }

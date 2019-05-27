@@ -14,13 +14,13 @@ class AppCoordinator: BRCoordinator {
     // MARK: Properties
     
     private let window: UIWindow
-    private let services: LocationServices
+    private let locationsManager: LocationsManager
     
     // MARK: Initialization
     
     init(appEnvironment: AppEnvironment, window: UIWindow) {
         self.window = window
-        self.services = appEnvironment.services
+        self.locationsManager = appEnvironment.locationsManager
         
         let rootViewController = UINavigationController()
 
@@ -31,7 +31,7 @@ class AppCoordinator: BRCoordinator {
     }
     
     override func start() {
-        let mapCoordinator = MapCoordinator(services: services, rootViewController: rootViewController!)
+        let mapCoordinator = MapCoordinator(locationsManager: locationsManager, rootViewController: rootViewController!)
         mapCoordinator.start()
     }
 }

@@ -12,34 +12,24 @@ class Location: Codable {
     enum CodingKeys: String, CodingKey {
         case id
         case name
-        case status
-        case reviewLink = "reviewlink"
-        case proxyLink = "proxylink"
-        case blogMap = "blogmap"
+        case breweryType = "brewery_type"
         case street
         case city
         case state
-        case zip
+        case zip = "postal_code"
         case country
         case phoneNumber = "phone"
-        case website = "url"
-        case rating = "overall"
-        case imageCount = "imagecount"
+        case website = "website_url"
     }
     
     let id: Int
     let name: String
-    let status: String
-    let reviewLink: URL
-    let proxyLink: URL
-    let blogMap: URL
+    let breweryType: String
     let street: String
     let city: String
     let state: String
     let zip: String
     let country: String
     let phoneNumber: String
-    let website: URL
-    let rating: Double
-    let imageCount: Int
+    let website: String
 }

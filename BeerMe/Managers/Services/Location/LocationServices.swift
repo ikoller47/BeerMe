@@ -11,7 +11,15 @@ import Alamofire
 
 class LocationServices: BRServices {
     
-    init() {
+    // MARK: - Properties
+    
+    private let baseURL: String
+    
+    // MARK: - Initialization
+    
+    init(baseURL: String) {
+        self.baseURL = baseURL
+        
         let decoder = JSONDecoder()
         let sessionManager = SessionManager()
 
@@ -19,6 +27,10 @@ class LocationServices: BRServices {
     }
     
     func getLocationsFor(city: String, completion: @escaping ([Location]?, Error?) -> Void) {
-        start(request: LocationRouter.getLocationsForCity(city), completion: completion)
+        let params = ["by_city": city]
+        
+        let request = BRRequest(baseURL: baseURL, path: "breweries", method: .get, params: params)
+        
+        start(request: request, completion: completion)
     }
 }

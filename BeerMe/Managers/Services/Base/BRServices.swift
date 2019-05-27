@@ -14,7 +14,7 @@ class BRServices {
     // MARK: - Properties
     
     private let sessionManager: SessionManager
-    let decoder: JSONDecoder
+    private let decoder: JSONDecoder
     
     // MARK: Initialization
     
@@ -26,14 +26,25 @@ class BRServices {
     // MARK: - Networking Requests
     
     func start<T: Codable>(request: URLRequestConvertible, completion: @escaping ([T]?, Error?) -> Void) {
-        sessionManager.request(request).responseJSON { response in
-            print("Status: \(response.response?.statusCode)")
-            if let result = response.result.value {
-                let JSON = result as! NSDictionary
-                print(JSON)
+        sessionManager.request(request).validate().responseData { response in
+            DispatchQueue.main.async {
+                guard let data = response.result.value else {
+                    return
+                }
+
+                let string = String(data: data, encoding: .utf8)
+//                print("Response: \(string)")
+
+                var model: [T]? = nil
+
+                do {
+                    model = try self.decoder.decode([T].self, from: data)
+                    completion(model, nil)
+                } catch {
+                    completion(nil, error)
+                }
             }
         }
-        
     }
     
 //    func start<T: Codable>(request: URLRequest, completion: @escaping ([T]?, Error?) -> Void) {

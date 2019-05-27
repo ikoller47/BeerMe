@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import MapKit
 
 class MapViewController: UIViewController {
+    
+    // MARK: - Outlets
+    
+    @IBOutlet private weak var mapView: MKMapView!
     
     // MARK: - Properties
     
     private let viewModel: MapViewModelProtocol
-    let services = LocationServices()
+
     // MARK: - Initialization
     
     required init(viewModel: MapViewModelProtocol) {
@@ -30,10 +35,6 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        services.getLocationsFor(city: "Chicago") { result, error in
-            
-        }
         // Do any additional setup after loading the view.
     }
 }

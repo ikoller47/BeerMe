@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol MapViewModelDelegate {
+protocol MapCoordinatorProtocol {
     
 }
 
@@ -17,24 +17,24 @@ class MapCoordinator: BRCoordinator {
     
     // MARK: - Properties
     
-    let services: LocationServices
+    private let locationsManager: LocationsManager
     
     // MARK: - Initialization
     
-    init(services: LocationServices, rootViewController: UINavigationController) {
-        self.services = services
+    init(locationsManager: LocationsManager, rootViewController: UINavigationController) {
+        self.locationsManager = locationsManager
         
         super.init(rootViewController: rootViewController)
     }
 
     override func start() {
-        let viewModel = MapViewModel(services: services, coordinator: self)
+        let viewModel = MapViewModel(locationsManager: locationsManager, coordinator: self)
         let viewController = MapViewController(viewModel: viewModel)
         
         rootViewController?.pushViewController(viewController, animated: true)
     }
 }
 
-extension MapCoordinator: MapViewModelDelegate {
+extension MapCoordinator: MapCoordinatorProtocol {
     
 }

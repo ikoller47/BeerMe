@@ -13,7 +13,7 @@ struct AppSettings {
     let servicesAPIKey: String
     
     static var production = AppSettings(
-        servicesURL: "http://beermapping.com/webservice/",
+        servicesURL: "https://api.openbrewerydb.org/",
         servicesAPIKey: "629cb39d0060a5a1e1c160871ada30dd"
     )
 }
