@@ -14,14 +14,16 @@ class BRRequest {
     // MARK: - Properties
     
     private let baseURL: String
+    private let apiKey: String
     private let path: String
     private let method: HTTPMethod
     private let params: [String: Any]?
     
     // MARK: - Initialization
     
-    init(baseURL: String, path: String, method: HTTPMethod, params: [String: Any]?) {
+    init(baseURL: String, apiKey: String, path: String, method: HTTPMethod, params: [String: Any]?) {
         self.baseURL = baseURL
+        self.apiKey = apiKey
         self.path = path
         self.method = method
         self.params = params
@@ -32,6 +34,8 @@ class BRRequest {
 extension BRRequest: URLRequestConvertible {
     func asURLRequest() throws -> URLRequest {
         var request = try URLRequest(url: "\(baseURL)\(path)", method: method)
+        
+        request.addValue("Bearer \(apiKey)", forHTTPHeaderField: HTTPHeaderFields.authorization)
         
         guard let params = params else {
             return request
