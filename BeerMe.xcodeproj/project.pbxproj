@@ -7,9 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C4AD6FB2294F60A002188AD /* LocationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD6FA2294F60A002188AD /* LocationsManager.swift */; };
+		3C4AD6FB2294F60A002188AD /* BreweryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD6FA2294F60A002188AD /* BreweryManager.swift */; };
 		3C4AD6FD2295B0D0002188AD /* MapLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD6FC2295B0D0002188AD /* MapLocationViewModel.swift */; };
 		3C4AD6FF229743EB002188AD /* BRRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AD6FE229743EB002188AD /* BRRequest.swift */; };
+		3C4EE0C022AB013200F35DEF /* GroupedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0BA22AB013200F35DEF /* GroupedCell.swift */; };
+		3C4EE0C122AB013200F35DEF /* GroupedFooterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0BB22AB013200F35DEF /* GroupedFooterSection.swift */; };
+		3C4EE0C222AB013200F35DEF /* GroupedHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0BC22AB013200F35DEF /* GroupedHeaderSection.swift */; };
+		3C4EE0C322AB013200F35DEF /* GroupedHeaderSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4EE0BD22AB013200F35DEF /* GroupedHeaderSection.xib */; };
+		3C4EE0C422AB013200F35DEF /* GroupedFooterSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4EE0BE22AB013200F35DEF /* GroupedFooterSection.xib */; };
+		3C4EE0C722AB020200F35DEF /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0C522AB020200F35DEF /* TextFieldCell.swift */; };
+		3C4EE0C822AB020200F35DEF /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4EE0C622AB020200F35DEF /* TextFieldCell.xib */; };
+		3C4EE0CE22AB021D00F35DEF /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4EE0C922AB021C00F35DEF /* TextViewCell.xib */; };
+		3C4EE0CF22AB021D00F35DEF /* TextCellViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0CA22AB021D00F35DEF /* TextCellViewModelDelegate.swift */; };
+		3C4EE0D022AB021D00F35DEF /* TextCellRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0CB22AB021D00F35DEF /* TextCellRouterProtocol.swift */; };
+		3C4EE0D122AB021D00F35DEF /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0CC22AB021D00F35DEF /* TextViewCell.swift */; };
+		3C4EE0D222AB021D00F35DEF /* TextCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0CD22AB021D00F35DEF /* TextCellViewModel.swift */; };
+		3C4EE0D422AB0ADC00F35DEF /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0D322AB0ADC00F35DEF /* JournalEntry.swift */; };
+		3C4EE0D622AC200900F35DEF /* JournalCreateCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0D522AC200900F35DEF /* JournalCreateCoordinatorProtocol.swift */; };
+		3C6C619622A8D8AB005C2AA7 /* UIApplication+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C619522A8D8AB005C2AA7 /* UIApplication+Utils.swift */; };
+		3C6C619A22A9996F005C2AA7 /* JournalCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C619822A9996F005C2AA7 /* JournalCreateViewController.swift */; };
+		3C6C619B22A9996F005C2AA7 /* JournalCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6C619922A9996F005C2AA7 /* JournalCreateViewController.xib */; };
+		3C6C619D22A99982005C2AA7 /* JournalCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C619C22A99982005C2AA7 /* JournalCreateViewModel.swift */; };
 		3CAC343F2288CA2C005826FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC343E2288CA2C005826FE /* AppDelegate.swift */; };
 		3CAC34462288CA2F005826FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CAC34452288CA2F005826FE /* Assets.xcassets */; };
 		3CAC34492288CA2F005826FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CAC34472288CA2F005826FE /* LaunchScreen.storyboard */; };
@@ -17,22 +35,66 @@
 		3CAC34622288D592005826FE /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAC34602288D592005826FE /* MapViewController.xib */; };
 		3CAC34642288D5A1005826FE /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC34632288D5A1005826FE /* MapViewModel.swift */; };
 		3CB48FF9228B9047002307C9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB48FF8228B9047002307C9 /* DataStore.swift */; };
-		3CB48FFC228BA6F7002307C9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB48FFB228BA6F7002307C9 /* Coordinator.swift */; };
 		3CB48FFE228BA795002307C9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB48FFD228BA795002307C9 /* AppCoordinator.swift */; };
-		3CB49001228BCEB9002307C9 /* BRCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB49000228BCEB9002307C9 /* BRCoordinator.swift */; };
 		3CB49003228CF344002307C9 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB49002228CF344002307C9 /* MapCoordinator.swift */; };
 		3CB49005228E6E9D002307C9 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB49004228E6E9D002307C9 /* AppEnvironment.swift */; };
 		3CB4900A228E71D6002307C9 /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB49009228E71D6002307C9 /* LocationServices.swift */; };
 		3CB4900C2291F54E002307C9 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4900B2291F54E002307C9 /* AppSettings.swift */; };
-		3CB4900E2291F8FB002307C9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4900D2291F8FB002307C9 /* Location.swift */; };
+		3CB4900E2291F8FB002307C9 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4900D2291F8FB002307C9 /* Brewery.swift */; };
+		3CC2A10A229C54F6009E9522 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC2A109229C54F6009E9522 /* Bond.framework */; };
+		3CC2A10C229C550A009E9522 /* Differ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC2A10B229C550A009E9522 /* Differ.framework */; };
+		3CC2A10E229C5512009E9522 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC2A10D229C5512009E9522 /* ReactiveKit.framework */; };
+		3CC2A112229E1063009E9522 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A111229E1063009E9522 /* LocationManager.swift */; };
+		3CC2A115229E1837009E9522 /* Notifications+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A114229E1837009E9522 /* Notifications+Name.swift */; };
+		3CC2A117229E3C0D009E9522 /* HTTPHeaderFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A116229E3C0D009E9522 /* HTTPHeaderFields.swift */; };
+		3CC2A119229F6335009E9522 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A118229F6334009E9522 /* UIViewController+Utils.swift */; };
+		3CC2A121229F6DEB009E9522 /* TabBarMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A11F229F6DEB009E9522 /* TabBarMenuController.swift */; };
+		3CC2A122229F6DEB009E9522 /* TabBarMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2A120229F6DEB009E9522 /* TabBarMenuController.xib */; };
+		3CC2A126229F720D009E9522 /* BRCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A125229F720D009E9522 /* BRCoordinator.swift */; };
+		3CC2A129229F7FFF009E9522 /* TabBarMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A128229F7FFF009E9522 /* TabBarMenuCoordinator.swift */; };
+		3CC2A12B229F843F009E9522 /* TabBarMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A12A229F843F009E9522 /* TabBarMenuViewModel.swift */; };
+		3CC2A12F22A0603E009E9522 /* BRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A12E22A0603E009E9522 /* BRNavigationController.swift */; };
+		3CC2A13122A08B51009E9522 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A13022A08B51009E9522 /* UIColor+Utils.swift */; };
+		3CC2A13422A0BFD5009E9522 /* JournalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A13322A0BFD5009E9522 /* JournalCoordinator.swift */; };
+		3CC2A13722A0C022009E9522 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A13522A0C022009E9522 /* JournalViewController.swift */; };
+		3CC2A13822A0C022009E9522 /* JournalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2A13622A0C022009E9522 /* JournalViewController.xib */; };
+		3CC2A13A22A0C030009E9522 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A13922A0C030009E9522 /* JournalViewModel.swift */; };
+		3CC2A13C22A231D0009E9522 /* BRTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A13B22A231D0009E9522 /* BRTabBarController.swift */; };
+		3CC2A13E22A2340F009E9522 /* BRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A13D22A2340F009E9522 /* BRViewController.swift */; };
+		3CC2A14122A2E3BC009E9522 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A14022A2E3BC009E9522 /* EntryViewModel.swift */; };
+		3CC2A14922A45DE8009E9522 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A14822A45DE8009E9522 /* ReusableView.swift */; };
+		3CC2A14B22A47E14009E9522 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A14A22A47E14009E9522 /* NibLoadable.swift */; };
+		3CC2A14D22A4AEB9009E9522 /* UICollectionView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A14C22A4AEB9009E9522 /* UICollectionView+Utils.swift */; };
+		3CC2A15022A4B093009E9522 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A14E22A4B093009E9522 /* EntryCell.swift */; };
+		3CC2A15122A4B093009E9522 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2A14F22A4B093009E9522 /* EntryCell.xib */; };
+		3CC2A15F22A4B388009E9522 /* BRCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A15E22A4B388009E9522 /* BRCollectionViewCell.swift */; };
+		3CC2A16322A58879009E9522 /* Sizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A16222A58878009E9522 /* Sizable.swift */; };
 		3CCB8B60228A518A0047C609 /* BRServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB8B5F228A518A0047C609 /* BRServices.swift */; };
 		3CCB8B64228A58D20047C609 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCB8B63228A58D20047C609 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C4AD6FA2294F60A002188AD /* LocationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsManager.swift; sourceTree = "<group>"; };
-		3C4AD6FC2295B0D0002188AD /* MapLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocationViewModel.swift; sourceTree = "<group>"; };
+		3C4AD6FA2294F60A002188AD /* BreweryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryManager.swift; sourceTree = "<group>"; };
+		3C4AD6FC2295B0D0002188AD /* MapLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapLocationViewModel.swift; path = ../MapLocationViewModel.swift; sourceTree = "<group>"; };
 		3C4AD6FE229743EB002188AD /* BRRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRRequest.swift; sourceTree = "<group>"; };
+		3C4EE0BA22AB013200F35DEF /* GroupedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedCell.swift; sourceTree = "<group>"; };
+		3C4EE0BB22AB013200F35DEF /* GroupedFooterSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedFooterSection.swift; sourceTree = "<group>"; };
+		3C4EE0BC22AB013200F35DEF /* GroupedHeaderSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedHeaderSection.swift; sourceTree = "<group>"; };
+		3C4EE0BD22AB013200F35DEF /* GroupedHeaderSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupedHeaderSection.xib; sourceTree = "<group>"; };
+		3C4EE0BE22AB013200F35DEF /* GroupedFooterSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupedFooterSection.xib; sourceTree = "<group>"; };
+		3C4EE0C522AB020200F35DEF /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		3C4EE0C622AB020200F35DEF /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
+		3C4EE0C922AB021C00F35DEF /* TextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextViewCell.xib; sourceTree = "<group>"; };
+		3C4EE0CA22AB021D00F35DEF /* TextCellViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCellViewModelDelegate.swift; sourceTree = "<group>"; };
+		3C4EE0CB22AB021D00F35DEF /* TextCellRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCellRouterProtocol.swift; sourceTree = "<group>"; };
+		3C4EE0CC22AB021D00F35DEF /* TextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
+		3C4EE0CD22AB021D00F35DEF /* TextCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCellViewModel.swift; sourceTree = "<group>"; };
+		3C4EE0D322AB0ADC00F35DEF /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		3C4EE0D522AC200900F35DEF /* JournalCreateCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCreateCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		3C6C619522A8D8AB005C2AA7 /* UIApplication+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Utils.swift"; sourceTree = "<group>"; };
+		3C6C619822A9996F005C2AA7 /* JournalCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCreateViewController.swift; sourceTree = "<group>"; };
+		3C6C619922A9996F005C2AA7 /* JournalCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JournalCreateViewController.xib; sourceTree = "<group>"; };
+		3C6C619C22A99982005C2AA7 /* JournalCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCreateViewModel.swift; sourceTree = "<group>"; };
 		3CAC343B2288CA2C005826FE /* BeerMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CAC343E2288CA2C005826FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CAC34452288CA2F005826FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,14 +104,40 @@
 		3CAC34602288D592005826FE /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		3CAC34632288D5A1005826FE /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		3CB48FF8228B9047002307C9 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		3CB48FFB228BA6F7002307C9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3CB48FFD228BA795002307C9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		3CB49000228BCEB9002307C9 /* BRCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRCoordinator.swift; sourceTree = "<group>"; };
 		3CB49002228CF344002307C9 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		3CB49004228E6E9D002307C9 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		3CB49009228E71D6002307C9 /* LocationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		3CB4900B2291F54E002307C9 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
-		3CB4900D2291F8FB002307C9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3CB4900D2291F8FB002307C9 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
+		3CC2A109229C54F6009E9522 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
+		3CC2A10B229C550A009E9522 /* Differ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differ.framework; path = Carthage/Build/iOS/Differ.framework; sourceTree = "<group>"; };
+		3CC2A10D229C5512009E9522 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
+		3CC2A111229E1063009E9522 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		3CC2A114229E1837009E9522 /* Notifications+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notifications+Name.swift"; sourceTree = "<group>"; };
+		3CC2A116229E3C0D009E9522 /* HTTPHeaderFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTTPHeaderFields.swift; path = ../HTTPHeaderFields.swift; sourceTree = "<group>"; };
+		3CC2A118229F6334009E9522 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		3CC2A11F229F6DEB009E9522 /* TabBarMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarMenuController.swift; path = ../Base/TabBarMenuController.swift; sourceTree = "<group>"; };
+		3CC2A120229F6DEB009E9522 /* TabBarMenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TabBarMenuController.xib; path = ../Base/TabBarMenuController.xib; sourceTree = "<group>"; };
+		3CC2A125229F720D009E9522 /* BRCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRCoordinator.swift; sourceTree = "<group>"; };
+		3CC2A128229F7FFF009E9522 /* TabBarMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMenuCoordinator.swift; sourceTree = "<group>"; };
+		3CC2A12A229F843F009E9522 /* TabBarMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMenuViewModel.swift; sourceTree = "<group>"; };
+		3CC2A12E22A0603E009E9522 /* BRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRNavigationController.swift; sourceTree = "<group>"; };
+		3CC2A13022A08B51009E9522 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		3CC2A13322A0BFD5009E9522 /* JournalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCoordinator.swift; sourceTree = "<group>"; };
+		3CC2A13522A0C022009E9522 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		3CC2A13622A0C022009E9522 /* JournalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JournalViewController.xib; sourceTree = "<group>"; };
+		3CC2A13922A0C030009E9522 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
+		3CC2A13B22A231D0009E9522 /* BRTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRTabBarController.swift; sourceTree = "<group>"; };
+		3CC2A13D22A2340F009E9522 /* BRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRViewController.swift; sourceTree = "<group>"; };
+		3CC2A14022A2E3BC009E9522 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
+		3CC2A14822A45DE8009E9522 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		3CC2A14A22A47E14009E9522 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		3CC2A14C22A4AEB9009E9522 /* UICollectionView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Utils.swift"; sourceTree = "<group>"; };
+		3CC2A14E22A4B093009E9522 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
+		3CC2A14F22A4B093009E9522 /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
+		3CC2A15E22A4B388009E9522 /* BRCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRCollectionViewCell.swift; sourceTree = "<group>"; };
+		3CC2A16222A58878009E9522 /* Sizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizable.swift; sourceTree = "<group>"; };
 		3CCB8B5F228A518A0047C609 /* BRServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRServices.swift; sourceTree = "<group>"; };
 		3CCB8B63228A58D20047C609 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,19 +147,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC2A10A229C54F6009E9522 /* Bond.framework in Frameworks */,
 				3CCB8B64228A58D20047C609 /* Alamofire.framework in Frameworks */,
+				3CC2A10C229C550A009E9522 /* Differ.framework in Frameworks */,
+				3CC2A10E229C5512009E9522 /* ReactiveKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C4AD6F92294F5FB002188AD /* Locations */ = {
+		3C4AD6F92294F5FB002188AD /* Brewery */ = {
 			isa = PBXGroup;
 			children = (
-				3C4AD6FA2294F60A002188AD /* LocationsManager.swift */,
+				3C4AD6FA2294F60A002188AD /* BreweryManager.swift */,
 			);
-			path = Locations;
+			path = Brewery;
+			sourceTree = "<group>";
+		};
+		3C4EE0B822AB013200F35DEF /* TextViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3C4EE0CB22AB021D00F35DEF /* TextCellRouterProtocol.swift */,
+				3C4EE0CD22AB021D00F35DEF /* TextCellViewModel.swift */,
+				3C4EE0CA22AB021D00F35DEF /* TextCellViewModelDelegate.swift */,
+				3C4EE0CC22AB021D00F35DEF /* TextViewCell.swift */,
+				3C4EE0C922AB021C00F35DEF /* TextViewCell.xib */,
+			);
+			path = TextViewCell;
+			sourceTree = "<group>";
+		};
+		3C4EE0B922AB013200F35DEF /* GroupedCell */ = {
+			isa = PBXGroup;
+			children = (
+				3C4EE0BA22AB013200F35DEF /* GroupedCell.swift */,
+				3C4EE0BB22AB013200F35DEF /* GroupedFooterSection.swift */,
+				3C4EE0BC22AB013200F35DEF /* GroupedHeaderSection.swift */,
+				3C4EE0BD22AB013200F35DEF /* GroupedHeaderSection.xib */,
+				3C4EE0BE22AB013200F35DEF /* GroupedFooterSection.xib */,
+			);
+			path = GroupedCell;
+			sourceTree = "<group>";
+		};
+		3C4EE0BF22AB013200F35DEF /* TextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				3C4EE0C522AB020200F35DEF /* TextFieldCell.swift */,
+				3C4EE0C622AB020200F35DEF /* TextFieldCell.xib */,
+			);
+			path = TextFieldCell;
+			sourceTree = "<group>";
+		};
+		3C6C618F22A610D5005C2AA7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3C4AD6FC2295B0D0002188AD /* MapLocationViewModel.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		3C6C619722A99395005C2AA7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3C6C619922A9996F005C2AA7 /* JournalCreateViewController.xib */,
+				3C6C619822A9996F005C2AA7 /* JournalCreateViewController.swift */,
+				3C6C619C22A99982005C2AA7 /* JournalCreateViewModel.swift */,
+				3C4EE0D522AC200900F35DEF /* JournalCreateCoordinatorProtocol.swift */,
+			);
+			name = "New Group";
+			path = "Base/New Group";
 			sourceTree = "<group>";
 		};
 		3CAC34322288CA2B005826FE = {
@@ -96,6 +240,7 @@
 			children = (
 				3CB49006228E6EB3002307C9 /* App */,
 				3CAC34502288CA5F005826FE /* Components */,
+				3CC2A113229E1801009E9522 /* Extensions */,
 				3CCB8B59228A49010047C609 /* Managers */,
 				3CCB8B58228A48F90047C609 /* Models */,
 				3CB48FFA228BA6CC002307C9 /* Protocols */,
@@ -111,7 +256,10 @@
 			isa = PBXGroup;
 			children = (
 				3CB48FFF228BCE55002307C9 /* Base */,
+				3C6C619722A99395005C2AA7 /* New Group */,
+				3CC2A13222A0BFA7009E9522 /* Journal */,
 				3CAC34582288D464005826FE /* Map */,
+				3CC2A127229F7C7D009E9522 /* TabBarMenu */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -119,11 +267,11 @@
 		3CAC34582288D464005826FE /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				3C6C618F22A610D5005C2AA7 /* New Group */,
 				3CAC34602288D592005826FE /* MapViewController.xib */,
 				3CAC345F2288D592005826FE /* MapViewController.swift */,
 				3CAC34632288D5A1005826FE /* MapViewModel.swift */,
 				3CB49002228CF344002307C9 /* MapCoordinator.swift */,
-				3C4AD6FC2295B0D0002188AD /* MapLocationViewModel.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -139,7 +287,9 @@
 		3CB48FFA228BA6CC002307C9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				3CB48FFB228BA6F7002307C9 /* Coordinator.swift */,
+				3CC2A14822A45DE8009E9522 /* ReusableView.swift */,
+				3CC2A14A22A47E14009E9522 /* NibLoadable.swift */,
+				3CC2A16222A58878009E9522 /* Sizable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -147,7 +297,11 @@
 		3CB48FFF228BCE55002307C9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				3CB49000228BCEB9002307C9 /* BRCoordinator.swift */,
+				3CC2A12E22A0603E009E9522 /* BRNavigationController.swift */,
+				3CC2A13B22A231D0009E9522 /* BRTabBarController.swift */,
+				3CC2A125229F720D009E9522 /* BRCoordinator.swift */,
+				3CC2A13D22A2340F009E9522 /* BRViewController.swift */,
+				3CC2A15E22A4B388009E9522 /* BRCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -180,10 +334,72 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		3CC2A110229E1053009E9522 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3CC2A111229E1063009E9522 /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		3CC2A113229E1801009E9522 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3CC2A114229E1837009E9522 /* Notifications+Name.swift */,
+				3CC2A118229F6334009E9522 /* UIViewController+Utils.swift */,
+				3CC2A13022A08B51009E9522 /* UIColor+Utils.swift */,
+				3CC2A14C22A4AEB9009E9522 /* UICollectionView+Utils.swift */,
+				3C6C619522A8D8AB005C2AA7 /* UIApplication+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3CC2A127229F7C7D009E9522 /* TabBarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3CC2A120229F6DEB009E9522 /* TabBarMenuController.xib */,
+				3CC2A11F229F6DEB009E9522 /* TabBarMenuController.swift */,
+				3CC2A12A229F843F009E9522 /* TabBarMenuViewModel.swift */,
+				3CC2A128229F7FFF009E9522 /* TabBarMenuCoordinator.swift */,
+			);
+			path = TabBarMenu;
+			sourceTree = "<group>";
+		};
+		3CC2A13222A0BFA7009E9522 /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				3CC2A13F22A2E265009E9522 /* Cells */,
+				3CC2A13622A0C022009E9522 /* JournalViewController.xib */,
+				3CC2A13522A0C022009E9522 /* JournalViewController.swift */,
+				3CC2A13922A0C030009E9522 /* JournalViewModel.swift */,
+				3CC2A13322A0BFD5009E9522 /* JournalCoordinator.swift */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		3CC2A13F22A2E265009E9522 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3CC2A14022A2E3BC009E9522 /* EntryViewModel.swift */,
+				3CC2A14E22A4B093009E9522 /* EntryCell.swift */,
+				3CC2A14F22A4B093009E9522 /* EntryCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3CC2A15222A4B29A009E9522 /* HTTPHeaderFields */ = {
+			isa = PBXGroup;
+			children = (
+				3CC2A116229E3C0D009E9522 /* HTTPHeaderFields.swift */,
+			);
+			path = HTTPHeaderFields;
+			sourceTree = "<group>";
+		};
 		3CCB8B58228A48F90047C609 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3CB4900D2291F8FB002307C9 /* Location.swift */,
+				3CB4900D2291F8FB002307C9 /* Brewery.swift */,
+				3C4EE0D322AB0ADC00F35DEF /* JournalEntry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,8 +407,9 @@
 		3CCB8B59228A49010047C609 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				3C4AD6F92294F5FB002188AD /* Locations */,
+				3C4AD6F92294F5FB002188AD /* Brewery */,
 				3CB48FF7228B8F59002307C9 /* DataStore */,
+				3CC2A110229E1053009E9522 /* Location */,
 				3CCB8B5E228A517A0047C609 /* Services */,
 			);
 			path = Managers;
@@ -201,6 +418,10 @@
 		3CCB8B5A228A49290047C609 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3C4EE0B922AB013200F35DEF /* GroupedCell */,
+				3C4EE0BF22AB013200F35DEF /* TextFieldCell */,
+				3C4EE0B822AB013200F35DEF /* TextViewCell */,
+				3CC2A15222A4B29A009E9522 /* HTTPHeaderFields */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -217,6 +438,9 @@
 		3CCB8B62228A58D20047C609 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CC2A10D229C5512009E9522 /* ReactiveKit.framework */,
+				3CC2A10B229C550A009E9522 /* Differ.framework */,
+				3CC2A109229C54F6009E9522 /* Bond.framework */,
 				3CCB8B63228A58D20047C609 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -281,7 +505,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC2A15122A4B093009E9522 /* EntryCell.xib in Resources */,
+				3C6C619B22A9996F005C2AA7 /* JournalCreateViewController.xib in Resources */,
+				3CC2A122229F6DEB009E9522 /* TabBarMenuController.xib in Resources */,
 				3CAC34492288CA2F005826FE /* LaunchScreen.storyboard in Resources */,
+				3C4EE0CE22AB021D00F35DEF /* TextViewCell.xib in Resources */,
+				3CC2A13822A0C022009E9522 /* JournalViewController.xib in Resources */,
+				3C4EE0C422AB013200F35DEF /* GroupedFooterSection.xib in Resources */,
+				3C4EE0C322AB013200F35DEF /* GroupedHeaderSection.xib in Resources */,
+				3C4EE0C822AB020200F35DEF /* TextFieldCell.xib in Resources */,
 				3CAC34462288CA2F005826FE /* Assets.xcassets in Resources */,
 				3CAC34622288D592005826FE /* MapViewController.xib in Resources */,
 			);
@@ -299,6 +531,9 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Bond.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Differ.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -315,22 +550,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC2A121229F6DEB009E9522 /* TabBarMenuController.swift in Sources */,
+				3CC2A14B22A47E14009E9522 /* NibLoadable.swift in Sources */,
 				3CB49003228CF344002307C9 /* MapCoordinator.swift in Sources */,
+				3C4EE0D622AC200900F35DEF /* JournalCreateCoordinatorProtocol.swift in Sources */,
+				3CC2A112229E1063009E9522 /* LocationManager.swift in Sources */,
 				3CAC34612288D592005826FE /* MapViewController.swift in Sources */,
+				3CC2A12F22A0603E009E9522 /* BRNavigationController.swift in Sources */,
 				3CB4900C2291F54E002307C9 /* AppSettings.swift in Sources */,
+				3CC2A119229F6335009E9522 /* UIViewController+Utils.swift in Sources */,
+				3CC2A126229F720D009E9522 /* BRCoordinator.swift in Sources */,
 				3CAC343F2288CA2C005826FE /* AppDelegate.swift in Sources */,
-				3CB48FFC228BA6F7002307C9 /* Coordinator.swift in Sources */,
+				3C4EE0C122AB013200F35DEF /* GroupedFooterSection.swift in Sources */,
+				3C4EE0C022AB013200F35DEF /* GroupedCell.swift in Sources */,
+				3CC2A15F22A4B388009E9522 /* BRCollectionViewCell.swift in Sources */,
+				3CC2A16322A58879009E9522 /* Sizable.swift in Sources */,
+				3CC2A129229F7FFF009E9522 /* TabBarMenuCoordinator.swift in Sources */,
+				3C4EE0D122AB021D00F35DEF /* TextViewCell.swift in Sources */,
 				3CAC34642288D5A1005826FE /* MapViewModel.swift in Sources */,
-				3CB4900E2291F8FB002307C9 /* Location.swift in Sources */,
+				3C4EE0C722AB020200F35DEF /* TextFieldCell.swift in Sources */,
+				3C6C619A22A9996F005C2AA7 /* JournalCreateViewController.swift in Sources */,
+				3CC2A13A22A0C030009E9522 /* JournalViewModel.swift in Sources */,
+				3CC2A117229E3C0D009E9522 /* HTTPHeaderFields.swift in Sources */,
+				3CB4900E2291F8FB002307C9 /* Brewery.swift in Sources */,
+				3CC2A14922A45DE8009E9522 /* ReusableView.swift in Sources */,
+				3CC2A12B229F843F009E9522 /* TabBarMenuViewModel.swift in Sources */,
 				3CB49005228E6E9D002307C9 /* AppEnvironment.swift in Sources */,
-				3C4AD6FB2294F60A002188AD /* LocationsManager.swift in Sources */,
+				3C6C619D22A99982005C2AA7 /* JournalCreateViewModel.swift in Sources */,
+				3CC2A15022A4B093009E9522 /* EntryCell.swift in Sources */,
+				3C4AD6FB2294F60A002188AD /* BreweryManager.swift in Sources */,
 				3CB48FF9228B9047002307C9 /* DataStore.swift in Sources */,
+				3C4EE0D022AB021D00F35DEF /* TextCellRouterProtocol.swift in Sources */,
+				3C4EE0D222AB021D00F35DEF /* TextCellViewModel.swift in Sources */,
+				3C6C619622A8D8AB005C2AA7 /* UIApplication+Utils.swift in Sources */,
+				3CC2A13C22A231D0009E9522 /* BRTabBarController.swift in Sources */,
+				3C4EE0CF22AB021D00F35DEF /* TextCellViewModelDelegate.swift in Sources */,
+				3CC2A13122A08B51009E9522 /* UIColor+Utils.swift in Sources */,
 				3CCB8B60228A518A0047C609 /* BRServices.swift in Sources */,
+				3CC2A14122A2E3BC009E9522 /* EntryViewModel.swift in Sources */,
+				3CC2A14D22A4AEB9009E9522 /* UICollectionView+Utils.swift in Sources */,
 				3C4AD6FF229743EB002188AD /* BRRequest.swift in Sources */,
-				3CB49001228BCEB9002307C9 /* BRCoordinator.swift in Sources */,
+				3CC2A13422A0BFD5009E9522 /* JournalCoordinator.swift in Sources */,
+				3C4EE0C222AB013200F35DEF /* GroupedHeaderSection.swift in Sources */,
+				3CC2A13E22A2340F009E9522 /* BRViewController.swift in Sources */,
+				3C4EE0D422AB0ADC00F35DEF /* JournalEntry.swift in Sources */,
 				3CB48FFE228BA795002307C9 /* AppCoordinator.swift in Sources */,
 				3CB4900A228E71D6002307C9 /* LocationServices.swift in Sources */,
 				3C4AD6FD2295B0D0002188AD /* MapLocationViewModel.swift in Sources */,
+				3CC2A13722A0C022009E9522 /* JournalViewController.swift in Sources */,
+				3CC2A115229E1837009E9522 /* Notifications+Name.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

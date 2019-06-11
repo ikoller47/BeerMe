@@ -1,23 +1,23 @@
 //
-//  BRCoordinator.swift
+//  BRTabBarCoordinator.swift
 //  BeerMe
 //
-//  Created by Ian Koller on 5/14/19.
+//  Created by Ian Koller on 5/29/19.
 //  Copyright © 2019 Sapphire. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class BRCoordinator {
+class BRCoordinator<T: UIViewController> {
     var childCoordinators: [BRCoordinator] = []
-    weak var rootViewController: UINavigationController?
+    weak var rootViewController: T?
     
-    init(rootViewController: UINavigationController?) {
+    init(rootViewController: T) {
         self.rootViewController = rootViewController
     }
     
     func start() {
-        fatalError("`start()` is abstract and should be implemented by subclases")
+        fatalError("start() is abstract and should be implemented by subclasses")
     }
 }
