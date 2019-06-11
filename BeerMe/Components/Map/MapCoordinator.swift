@@ -13,22 +13,28 @@ protocol MapCoordinatorProtocol {
     
 }
 
-class MapCoordinator: BRCoordinator {
+protocol LocationCoordinatorProtocol {
+    
+}
+
+class MapCoordinator: BRCoordinator<BRNavigationController> {
     
     // MARK: - Properties
     
-    private let locationsManager: LocationsManager
+    private let breweryManager: BreweryManager
+    private let locationManager: LocationManager
     
     // MARK: - Initialization
     
-    init(locationsManager: LocationsManager, rootViewController: UINavigationController) {
-        self.locationsManager = locationsManager
+    init(breweryManager: BreweryManager, locationManager: LocationManager, rootViewController: BRNavigationController) {
+        self.breweryManager = breweryManager
+        self.locationManager = locationManager
         
         super.init(rootViewController: rootViewController)
     }
 
     override func start() {
-        let viewModel = MapViewModel(locationsManager: locationsManager, coordinator: self)
+        let viewModel = MapViewModel(breweryManager: breweryManager, locationManager: locationManager, coordinator: self)
         let viewController = MapViewController(viewModel: viewModel)
         
         rootViewController?.pushViewController(viewController, animated: true)
@@ -36,5 +42,9 @@ class MapCoordinator: BRCoordinator {
 }
 
 extension MapCoordinator: MapCoordinatorProtocol {
+    
+}
+
+extension MapCoordinator: LocationCoordinatorProtocol {
     
 }

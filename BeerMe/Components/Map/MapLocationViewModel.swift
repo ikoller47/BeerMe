@@ -7,42 +7,62 @@
 //
 
 import Foundation
-import CoreLocation
+import MapKit
 
-class MapLocationViewModel {
+class LocationViewModel: NSObject {
     
     // MARK: - Properties
     
-    private let model: Location
+    private let model: Brewery
     private let coordinator: MapCoordinatorProtocol
-    
-    var id: Int {
-        return model.id
-    }
     
     var name: String {
         return model.name
     }
     
-    var breweryType: String {
-        return model.breweryType
+    var address1: String {
+        return "\(model.location.address1)"
     }
     
-    var address: String {
-        return "\(model.street), \(model.city), \(model.state) \(model.zip)"
-    }
-    var phoneNumber: String {
-        return model.phoneNumber
+    var cityStateZip: String {
+        return "\(model.location.city), \(model.location.state) \(model.location.zipCode)"
     }
     
-    var website: String {
-        return model.website
+    var phone: String {
+        return model.phone
+    }
+    
+    var url: URL {
+        return model.url
+    }
+    
+    var latitude: Double {
+        return model.coordinates.latitude
+    }
+    
+    var longitude: Double {
+        return model.coordinates.longitude
+    }
+    
+    var image: UIImage {
+        return UIImage(named: "beer.pdf")!
     }
     
     // MARK: - Initialization
     
-    init(model: Location, coordinator: MapCoordinatorProtocol) {
+    init(model: Brewery, coordinator: MapCoordinatorProtocol) {
         self.model = model
         self.coordinator = coordinator
+    }
+}
+
+// MARK: - MKAnnotation
+extension LocationViewModel: MKAnnotation {
+    var title: String? {
+        return name
+    }
+    
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
