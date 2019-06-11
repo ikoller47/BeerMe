@@ -13,34 +13,36 @@ class BRServices {
     
     // MARK: - Properties
     
-    private let sessionManager: SessionManager
+    private let session: Session
     private let decoder: JSONDecoder
     
     // MARK: Initialization
     
-    init(sessionManager: SessionManager, decoder: JSONDecoder) {
-        self.sessionManager = sessionManager
+    init(session: Session, decoder: JSONDecoder) {
+        self.session = session
         self.decoder = decoder
     }
     
     // MARK: - Networking Requests
     
-    func start<T: Codable>(request: URLRequestConvertible, completion: @escaping ([T]?, Error?) -> Void) {
-        sessionManager.request(request).validate().responseData { response in
+    func start<T: Codable>(request: URLRequestConvertible, completion: @escaping (T?, Error?) -> Void) {
+        session.request(request).validate().responseData { response in
             DispatchQueue.main.async {
-                guard let data = response.result.value else {
-                    return
-                }
-
-                let string = String(data: data, encoding: .utf8)
-//                print("Response: \(string)")
-
-                var model: [T]? = nil
-
-                do {
-                    model = try self.decoder.decode([T].self, from: data)
-                    completion(model, nil)
-                } catch {
+                switch response.result {
+                case .success(let data):
+                    var model: T? = nil
+                    
+                    let string = String(data: data, encoding: .utf8)
+                    print("Response: \(string)")
+                    
+                    do {
+                        model = try self.decoder.decode(T.self, from: data)
+                        completion(model, nil)
+                    } catch {
+                        completion(nil, error)
+                    }
+                    
+                case.failure(let error):
                     completion(nil, error)
                 }
             }
