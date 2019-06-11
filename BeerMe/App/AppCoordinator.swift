@@ -9,20 +9,24 @@
 import Foundation
 import UIKit
 
-class AppCoordinator: BRCoordinator {
+class AppCoordinator: BRCoordinator<UIViewController> {
     
     // MARK: Properties
     
     private let window: UIWindow
-    private let locationsManager: LocationsManager
+    private let breweryManager: BreweryManager
+    private let locationManager: LocationManager
+    private let dataStore: DataStore
     
     // MARK: Initialization
     
     init(appEnvironment: AppEnvironment, window: UIWindow) {
         self.window = window
-        self.locationsManager = appEnvironment.locationsManager
+        self.breweryManager = appEnvironment.breweryManager
+        self.locationManager = appEnvironment.locationManager
+        self.dataStore = appEnvironment.dataStore
         
-        let rootViewController = UINavigationController()
+        let rootViewController = UIViewController()
 
         super.init(rootViewController: rootViewController)
         
@@ -31,7 +35,9 @@ class AppCoordinator: BRCoordinator {
     }
     
     override func start() {
-        let mapCoordinator = MapCoordinator(locationsManager: locationsManager, rootViewController: rootViewController!)
-        mapCoordinator.start()
+        let tabMenuRootViewController = BRTabBarController()
+        // Weird that its not used
+        let tabMenuCoordinator = TabCoordinator(rootViewController: tabMenuRootViewController, breweryManager: breweryManager, locationManager: locationManager, dataStore: dataStore)
+        rootViewController?.addChildToView(tabMenuRootViewController)
     }
 }
