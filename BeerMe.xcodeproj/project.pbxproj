@@ -73,7 +73,6 @@
 		3CC2A16322A58879009E9522 /* Sizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A16222A58878009E9522 /* Sizable.swift */; };
 		3CCB8B60228A518A0047C609 /* BRServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB8B5F228A518A0047C609 /* BRServices.swift */; };
 		3CCB8B64228A58D20047C609 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCB8B63228A58D20047C609 /* Alamofire.framework */; };
-		3CD7006122B4735700900FD3 /* UIViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7006022B4735700900FD3 /* UIViewController+UITextFieldDelegate.swift */; };
 		3CD7006522B70B0700900FD3 /* BRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7006422B70B0700900FD3 /* BRViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -146,7 +145,6 @@
 		3CC2A16222A58878009E9522 /* Sizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizable.swift; sourceTree = "<group>"; };
 		3CCB8B5F228A518A0047C609 /* BRServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRServices.swift; sourceTree = "<group>"; };
 		3CCB8B63228A58D20047C609 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		3CD7006022B4735700900FD3 /* UIViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		3CD7006422B70B0700900FD3 /* BRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -368,7 +366,6 @@
 				3CC2A13022A08B51009E9522 /* UIColor+Utils.swift */,
 				3CC2A14C22A4AEB9009E9522 /* UICollectionView+Utils.swift */,
 				3C6C619522A8D8AB005C2AA7 /* UIApplication+Utils.swift */,
-				3CD7006022B4735700900FD3 /* UIViewController+UITextFieldDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -622,7 +619,6 @@
 				3CC2A13722A0C022009E9522 /* JournalViewController.swift in Sources */,
 				3C4EE0DB22B040A400F35DEF /* LocalizableStrings.swift in Sources */,
 				3CC2A115229E1837009E9522 /* Notifications+Name.swift in Sources */,
-				3CD7006122B4735700900FD3 /* UIViewController+UITextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
