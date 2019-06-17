@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EntryCell: GroupedCell, Sizable {
+class EntryCell: GroupedCell, ResizableView {
 
     // MARK: - Outlets
     

@@ -34,8 +34,8 @@ class JournalViewModel: JournalViewModelProtocol {
         self.coordinator = coordinator
         self.dataStore = dataStore
         
-        title = "My Beers"
-        entriesHeader = "Entries"
+        title = LocalizableStrings.journalTitle.localized
+        entriesHeader = LocalizableStrings.entries.localized
         
         loadEntries()
     }
@@ -48,7 +48,7 @@ class JournalViewModel: JournalViewModelProtocol {
         }
         
         displayEntries.value = entries.map {
-            EntryViewModel(title: $0.title, description: $0.details, rating: "5")
+            EntryViewModel(title: $0.title, description: $0.details, rating: $0.rating)
         }
     }
     

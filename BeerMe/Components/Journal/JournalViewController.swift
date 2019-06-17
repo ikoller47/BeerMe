@@ -18,10 +18,6 @@ class JournalViewController: UIViewController {
     
     // MARK: - Properties
     
-    private enum Section: Int, CaseIterable {
-        case entries
-    }
-    
     private let viewModel: JournalViewModelProtocol
     
     // MARK: - Initialization
@@ -40,6 +36,7 @@ class JournalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         bindViewModel()
 
         title = viewModel.title
@@ -57,7 +54,7 @@ class JournalViewController: UIViewController {
     // MARK: - Binding
     
     func bindViewModel() {
-        viewModel.displayEntries.observeNext {
+        _ = viewModel.displayEntries.observeNext {
             if $0.count > 0 {
                 self.emptyStateView.isHidden = true
                 self.collectionView.reloadData()
@@ -72,49 +69,31 @@ class JournalViewController: UIViewController {
     }
 }
 
+// MARK: - UICollectionViewDataSource
 extension JournalViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return Section.allCases.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let section = Section(rawValue: section) else { fatalError() }
-        
-        switch section {
-        case .entries:
-            return viewModel.displayEntries.value.count
-        }
+        return viewModel.displayEntries.value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let section = Section(rawValue: indexPath.section) else { fatalError() }
+        let cell: EntryCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.configure(withModel: viewModel.displayEntries.value[indexPath.row])
         
-        switch section {
-        case .entries:
-            let cell: EntryCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.configure(withModel: viewModel.displayEntries.value[indexPath.row])
-            
-            cell.isFirstInSection = indexPath.row == 0
-            cell.isLastInSection = indexPath.row == viewModel.displayEntries.value.count - 1
-            
-            return cell
-        }
+        cell.isFirstInSection = indexPath.row == 0
+        cell.isLastInSection = indexPath.row == viewModel.displayEntries.value.count - 1
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        guard collectionView.numberOfItems(inSection: section) != 0, let section = Section(rawValue: section) else {
-            return .zero
-        }
-        
-        switch section {
-        case .entries:
-            return GroupedHeaderSection.size(inCollectionView: collectionView, withModel: viewModel.entriesHeader)
-        }
+            return GroupedHeaderSection.size(forCollectionView: collectionView, withModel: viewModel.entriesHeader)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        guard let section = Section(rawValue: indexPath.section) else { fatalError() }
         
         if kind == UICollectionView.elementKindSectionHeader {
             let headerView = collectionView.dequeueReusableView(ofKind: kind, forIndexPath: indexPath) as GroupedHeaderSection
@@ -127,14 +106,10 @@ extension JournalViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension JournalViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let section = Section(rawValue: indexPath.section) else { return .zero }
-        
-        switch section {
-        case .entries:
-            let model = viewModel.displayEntries.value[indexPath.item]
-            return EntryCell.size(inCollectionView: collectionView, withModel: model)
-        }
+        let model = viewModel.displayEntries.value[indexPath.item]
+        return EntryCell.size(forCollectionView: collectionView, withModel: model)
     }
 }

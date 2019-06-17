@@ -8,20 +8,25 @@
 
 import Foundation
 
-protocol EntryViewModelProtocol {
+protocol EntryViewModelProtocol: BRViewModelProtocol {
     var title: String { get }
     var description: String { get }
     var rating: String { get }
 }
 
-class EntryViewModel: EntryViewModelProtocol {
+class EntryViewModel: BRViewModel, EntryViewModelProtocol {
+    
+    // MARK: - Properties
+    
     let title: String
     let description: String
     let rating: String
     
-    init(title: String, description: String, rating: String) {
+    // MARK: - Initialization
+    
+    init(title: String, description: String, rating: Int) {
         self.title = title
         self.description = description
-        self.rating = rating
+        self.rating = String(rating)
     }
 }

@@ -54,11 +54,10 @@ class MapViewController: UIViewController {
     // MARK: - Binding
     
     func bindViewModel() {
-//        viewModel.isLoading.observeNext(with: test(this:))
-        viewModel.locations.observeNext {
+        _ = viewModel.locations.observeNext {
             $0?.forEach { self.mapView.addAnnotation($0)}
         }
-        viewModel.currentLocation.observeNext {
+        _ = viewModel.currentLocation.observeNext {
             guard let coordinate = $0?.coordinate else {
                 return
             }
@@ -76,8 +75,8 @@ class MapViewController: UIViewController {
 
         title = viewModel.title
         
-        callButton.setTitle("Call", for: .normal)
-        websiteButton.setTitle("Website", for: .normal)
+        callButton.setTitle(LocalizableStrings.call.localized, for: .normal)
+        websiteButton.setTitle(LocalizableStrings.website.localized, for: .normal)
         
         detailButtons.forEach {
             $0.backgroundColor = .navigationBarText
