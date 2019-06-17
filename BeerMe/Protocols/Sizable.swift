@@ -9,22 +9,21 @@
 import Foundation
 import UIKit
 
-protocol Sizable: NibLoadable {
+protocol ResizableView: NibLoadable {
     associatedtype Model
     
-    /** Defaults to .zero */
-    static var staticSize: CGSize { get }
-    
     func configure(withModel model: Model)
+    
+    static var staticSize: CGSize { get }
 }
 
-extension Sizable where Self: UIView {
+extension ResizableView where Self: UIView {
     
     static var staticSize: CGSize {
         return .zero
     }
     
-    static func size(inCollectionView collectionView: UICollectionView, withModel model: Model) -> CGSize {
+    static func size(forCollectionView collectionView: UICollectionView, withModel model: Model) -> CGSize {
         var size: CGSize
         
         if staticSize == .zero {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextViewCell: GroupedCell, UITextViewDelegate, Sizable {
+class TextViewCell: GroupedCell, UITextViewDelegate, ResizableView {
     
     // MARK: - IBOutlets
     
@@ -34,15 +34,15 @@ class TextViewCell: GroupedCell, UITextViewDelegate, Sizable {
     // MARK: - UITextViewDelegate
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        
+
         let currentText: String = textView.text
         let updatedText = (currentText as NSString).replacingCharacters(in: range, with: text)
-        
+
         if updatedText.isEmpty {
-            
+
             textView.text = placeholder
             textView.textColor = UIColor.placeholderGray
-            
+
             textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
         }
         else if textView.textColor == UIColor.placeholderGray && !text.isEmpty {
@@ -53,7 +53,7 @@ class TextViewCell: GroupedCell, UITextViewDelegate, Sizable {
             viewModel?.updated(withText: updatedText)
             return true
         }
-        
+
         viewModel?.updated(withText: text)
         return false
     }

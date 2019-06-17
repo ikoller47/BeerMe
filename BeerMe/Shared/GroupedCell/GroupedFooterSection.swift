@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroupedFooterSection: UICollectionReusableView, Sizable {
+class GroupedFooterSection: UICollectionReusableView, ResizableView {
     
     // MARK: - Outlets
     

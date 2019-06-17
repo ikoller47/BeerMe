@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroupedHeaderSection: UICollectionReusableView, Sizable {
+class GroupedHeaderSection: UICollectionReusableView, ResizableView {
 
     // MARK: - Outlets
     

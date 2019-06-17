@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextFieldCell: GroupedCell, UITextFieldDelegate, Sizable {
+class TextFieldCell: GroupedCell, UITextFieldDelegate, ResizableView {
 
     // MARK: - IBOutlets
     
@@ -33,16 +33,16 @@ class TextFieldCell: GroupedCell, UITextFieldDelegate, Sizable {
     // MARK: - UITextFieldDelegate
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let currentText = textField.text {
-            presenter?.updated(withText: currentText)
+        if let updatedString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
+            presenter?.updated(withText: updatedString)
         }
-        
+
         return true
     }
     
     // MARK: - Sizing
     
-    static var staticSize: CGSize {
+    var staticSize: CGSize {
         return CGSize(
             width: UIView.noIntrinsicMetric,
             height: 50
