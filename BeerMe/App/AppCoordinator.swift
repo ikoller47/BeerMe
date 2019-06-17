@@ -36,8 +36,10 @@ class AppCoordinator: BRCoordinator<UIViewController> {
     
     override func start() {
         let tabMenuRootViewController = BRTabBarController()
-        // Weird that its not used
+        
         let tabMenuCoordinator = TabCoordinator(rootViewController: tabMenuRootViewController, breweryManager: breweryManager, locationManager: locationManager, dataStore: dataStore)
+        tabMenuCoordinator.start()
+        
         rootViewController?.addChildToView(tabMenuRootViewController)
     }
 }
