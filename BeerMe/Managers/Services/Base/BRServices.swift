@@ -32,9 +32,6 @@ class BRServices {
                 case .success(let data):
                     var model: T? = nil
                     
-                    let string = String(data: data, encoding: .utf8)
-                    print("Response: \(string)")
-                    
                     do {
                         model = try self.decoder.decode(T.self, from: data)
                         completion(model, nil)
@@ -48,60 +45,4 @@ class BRServices {
             }
         }
     }
-    
-//    func start<T: Codable>(request: URLRequest, completion: @escaping ([T]?, Error?) -> Void) {
-//        sessionManager.request(request).validate().responseData { response in
-//            DispatchQueue.main.async {
-//                guard let data = response.result.value else {
-//                    return
-//                }
-//
-//                var model: [T]? = nil
-//
-//                do {
-//                    model = try self.decoder.decode([T].self, from: data)
-//                    completion(model, nil)
-//                } catch {
-//                    completion(nil, error)
-//                }
-//            }
-//
-//        }
-//    }
-//
-//    func start(request: URLRequest, completion: @escaping (Error?) -> Void) {
-//        sessionManager.request(request).validate().responseData { response in
-//            DispatchQueue.main.async {
-//                switch response.result {
-//                case .success:
-//                    completion(nil)
-//                case .failure(let error):
-//                    completion(error)
-//                }
-//            }
-//        }
-//    }
-//
-//    func start<T: Codable>(request: URLRequest, completion: @escaping (T?, Error?) -> Void) {
-//        print("URL: \(request.url)")
-//        sessionManager.request(request).validate().responseData { response in
-//            DispatchQueue.main.async {
-//                print("Status: \(response.response?.statusCode)")
-//                guard let data = response.result.value else {
-//                    return
-//                }
-//                let string = String(data: data, encoding: .utf8)
-//                print("Response: \(string)")
-//
-//                var model: T? = nil
-//
-//                do {
-//                    model = try self.decoder.decode(T.self, from: data)
-//                    completion(model, nil)
-//                } catch {
-//                    completion(nil, error)
-//                }
-//            }
-//        }
-//    }
 }
