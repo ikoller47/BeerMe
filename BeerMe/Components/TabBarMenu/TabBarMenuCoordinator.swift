@@ -24,19 +24,20 @@ class TabCoordinator: BRCoordinator<BRTabBarController> {
         self.locationManager = locationManager
         self.dataStore = dataStore
         
+        super.init(rootViewController: rootViewController)
+    }
+    
+    override func start() {
         let mapRootViewController = BRNavigationController()
         let mapCoordinator = MapCoordinator(breweryManager: breweryManager, locationManager: locationManager, rootViewController: mapRootViewController)
         mapCoordinator.start()
-        mapRootViewController.tabBarItem = UITabBarItem(title: "Breweries", image: UIImage(named: "pin"), selectedImage: nil)
+        mapRootViewController.tabBarItem = UITabBarItem(title: LocalizableStrings.createEntryTitle.localized, image: UIImage(named: "pin"), selectedImage: nil)
         
         let journalRootViewController = BRNavigationController()
         let journalCoordinator = JournalCoordinator(dataStore: dataStore, rootViewController: journalRootViewController)
         journalCoordinator.start()
-        journalRootViewController.tabBarItem = UITabBarItem(title: "My Beers", image: UIImage(named: "note"), selectedImage: nil)
+        journalRootViewController.tabBarItem = UITabBarItem(title: LocalizableStrings.journalTitle.localized, image: UIImage(named: "note"), selectedImage: nil)
         
-        
-        rootViewController.viewControllers = [mapRootViewController, journalRootViewController]
-        
-        super.init(rootViewController: rootViewController)
+        rootViewController?.viewControllers = [mapRootViewController, journalRootViewController]
     }
 }
