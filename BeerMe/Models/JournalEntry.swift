@@ -11,4 +11,5 @@ import Foundation
 struct JournalEntry: Codable {
     let title: String
     let details: String
+    let rating: Int
 }
