@@ -42,7 +42,7 @@ class TextFieldCell: GroupedCell, UITextFieldDelegate, ResizableView {
     
     // MARK: - Sizing
     
-    var staticSize: CGSize {
+    static var staticSize: CGSize {
         return CGSize(
             width: UIView.noIntrinsicMetric,
             height: 50
