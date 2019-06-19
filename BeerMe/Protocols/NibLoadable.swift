@@ -10,19 +10,21 @@ import Foundation
 import UIKit
 
 protocol NibLoadable: class {
-    static var nibName: String { get }
+    static var nib: UINib { get }
+}
+
+extension NibLoadable {
+    static var nib: UINib {
+        return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
+    }
 }
 
 extension NibLoadable where Self: UIView {
-    static var nibName: String {
-        return String(describing: Self.self)
-    }
-    
-    static func viewFromNib() -> Self {
-        let bundle = Bundle(for: Self.self)
-        let nib = UINib(nibName: Self.nibName, bundle: bundle)
-        
-        return nib.instantiate(withOwner: nil, options: nil)[0] as! Self
+    static func loadFromNib() -> Self {
+        guard let view = nib.instantiate(withOwner: nil, options: nil).first as? Self else {
+            fatalError("The nib \(nib) expected its root view to be of type \(self)")
+        }
+        return view
     }
 }
 

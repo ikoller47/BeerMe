@@ -13,11 +13,11 @@ extension UICollectionView {
     // MARK: - Registration
     
     func register<T: UICollectionViewCell>(_: T.Type) {
-        register(UINib(nibName: T.nibName, bundle: .main), forCellWithReuseIdentifier: T.defaultReuseIdentifier)
+        register(T.nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
     }
     
     func register<T: UICollectionReusableView>(_: T.Type, kind: String) {
-        register(UINib(nibName: T.nibName, bundle: .main), forSupplementaryViewOfKind: kind, withReuseIdentifier: T.defaultReuseIdentifier)
+        register(T.nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: T.defaultReuseIdentifier)
     }
     
     func dequeueReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: IndexPath) -> T {
