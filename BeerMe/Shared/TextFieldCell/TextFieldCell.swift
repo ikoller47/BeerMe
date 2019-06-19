@@ -18,12 +18,10 @@ class TextFieldCell: GroupedCell, UITextFieldDelegate, ResizableView {
     
     private var viewModel: TextCellViewModelProtocol?
     
-    private var presenter: TextCellViewModelProtocol?
-    
     // MARK: - Configuration
     
     func configure(withModel model: TextCellViewModelProtocol) {
-        presenter = model
+        viewModel = model
 
         textField.text = model.value
         textField.placeholder = model.placeholder
@@ -34,7 +32,7 @@ class TextFieldCell: GroupedCell, UITextFieldDelegate, ResizableView {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let updatedString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
-            presenter?.updated(withText: updatedString)
+            viewModel?.updated(withText: updatedString)
         }
 
         return true
