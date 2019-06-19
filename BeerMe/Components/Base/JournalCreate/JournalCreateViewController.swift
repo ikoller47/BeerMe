@@ -43,16 +43,17 @@ class JournalCreateViewController: BRViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bindViewModel()
+        hideKeyboardOnTap()
+        
         title = viewModel.title
+        
         collectionView.register(TextViewCell.self)
         collectionView.register(TextFieldCell.self)
         collectionView.register(GroupedHeaderSection.self, kind: UICollectionView.elementKindSectionHeader)
                 
-        submitButton = UIBarButtonItem(title: LocalizableStrings.submit.localized, style: .plain, target: self, action: #selector(submitPressed))
-//        submitButton.isEnabled = false
+        submitButton = UIBarButtonItem(title: BeerMeStrings.submit.localized, style: .plain, target: self, action: #selector(submitPressed))
         navigationItem.rightBarButtonItem = submitButton
-        
-        bindViewModel()
     }
     
     // MARK: - Bindings

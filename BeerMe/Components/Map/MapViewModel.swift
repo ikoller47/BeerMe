@@ -40,7 +40,7 @@ class MapViewModel: MapViewModelProtocol {
         self.breweryManager = breweryManager
         self.locationManager = locationManager
         self.coordinator = coordinator
-        self.title = LocalizableStrings.mapTitle.localized
+        self.title = BeerMeStrings.mapTitle.localized
         
         NotificationCenter.default.addObserver(self, selector: #selector(getLocations), name: .didUpdateLocation, object: locationManager)
     }

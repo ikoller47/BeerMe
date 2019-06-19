@@ -31,12 +31,12 @@ class TabCoordinator: BRCoordinator<BRTabBarController> {
         let mapRootViewController = BRNavigationController()
         let mapCoordinator = MapCoordinator(breweryManager: breweryManager, locationManager: locationManager, rootViewController: mapRootViewController)
         mapCoordinator.start()
-        mapRootViewController.tabBarItem = UITabBarItem(title: LocalizableStrings.createEntryTitle.localized, image: UIImage(named: "pin"), selectedImage: nil)
+        mapRootViewController.tabBarItem = UITabBarItem(title: BeerMeStrings.createEntryTitle.localized, image: UIImage(named: "pin"), selectedImage: nil)
         
         let journalRootViewController = BRNavigationController()
         let journalCoordinator = JournalCoordinator(dataStore: dataStore, rootViewController: journalRootViewController)
         journalCoordinator.start()
-        journalRootViewController.tabBarItem = UITabBarItem(title: LocalizableStrings.journalTitle.localized, image: UIImage(named: "note"), selectedImage: nil)
+        journalRootViewController.tabBarItem = UITabBarItem(title: BeerMeStrings.journalTitle.localized, image: UIImage(named: "note"), selectedImage: nil)
         
         rootViewController?.viewControllers = [mapRootViewController, journalRootViewController]
     }

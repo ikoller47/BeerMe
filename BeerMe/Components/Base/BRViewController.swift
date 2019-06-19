@@ -10,13 +10,4 @@ import UIKit
 
 class BRViewController: UIViewController {
     
-//    required init?(coder aDecoder: NSCoder) {
-//        preconditionFailure("You must use `init(viewModel:)")
-//    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        hideKeyboardOnTap()
-    }
 }

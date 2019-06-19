@@ -33,9 +33,9 @@ class JournalViewModel: JournalViewModelProtocol {
     init(dataStore: DataStore, coordinator: JournalCoordinatorProtocol) {
         self.coordinator = coordinator
         self.dataStore = dataStore
-        
-        title = LocalizableStrings.journalTitle.localized
-        entriesHeader = LocalizableStrings.entries.localized
+                
+        title = BeerMeStrings.journalTitle.localized
+        entriesHeader = BeerMeStrings.entries.localized
         
         loadEntries()
     }

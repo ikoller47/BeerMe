@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JournalViewController: UIViewController {
+class JournalViewController: BRViewController {
     
     // MARK: - Outlets
     

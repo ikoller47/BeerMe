@@ -75,8 +75,8 @@ class MapViewController: UIViewController {
 
         title = viewModel.title
         
-        callButton.setTitle(LocalizableStrings.call.localized, for: .normal)
-        websiteButton.setTitle(LocalizableStrings.website.localized, for: .normal)
+        callButton.setTitle(BeerMeStrings.call.localized, for: .normal)
+        websiteButton.setTitle(BeerMeStrings.website.localized, for: .normal)
         
         detailButtons.forEach {
             $0.backgroundColor = .navigationBarText

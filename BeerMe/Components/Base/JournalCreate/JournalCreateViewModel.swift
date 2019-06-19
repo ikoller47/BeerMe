@@ -47,8 +47,8 @@ class JournalCreateViewModel: BRViewModel, JournalCreateViewModelProtocol, TextC
     // MARK: - Initialization
     
     init(dataStore: DataStore, delegate: JournalCreateViewModelDelegate, coordinator: JournalCreateCoordinatorProtocol) {
-        title = LocalizableStrings.createEntryTitle.localized
-        createHeader = LocalizableStrings.newEntry.localized
+        title = BeerMeStrings.createEntryTitle.localized
+        createHeader = BeerMeStrings.newEntry.localized
         
         self.coordinator = coordinator
         self.dataStore = dataStore
@@ -56,8 +56,8 @@ class JournalCreateViewModel: BRViewModel, JournalCreateViewModelProtocol, TextC
         
         super.init()
         
-        let emailRow = TextCellViewModel(placeholder: LocalizableStrings.entryTitlePlaceholder.localized, delegate: self, coordinator: coordinator)
-        let feedbackRow = TextCellViewModel(placeholder: LocalizableStrings.entryDetailsPlaceholder.localized, delegate: self, coordinator: coordinator)
+        let emailRow = TextCellViewModel(placeholder: BeerMeStrings.entryTitlePlaceholder.localized, delegate: self, coordinator: coordinator)
+        let feedbackRow = TextCellViewModel(placeholder: BeerMeStrings.entryDetailsPlaceholder.localized, delegate: self, coordinator: coordinator)
         
         entryRows = [emailRow, feedbackRow]
     }
