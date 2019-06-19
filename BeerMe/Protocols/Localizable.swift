@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol Localizable {
+protocol Localizable: RawRepresentable {
     var localized: String { get }
 }
 
-extension Localizable where Self: RawRepresentable, Self.RawValue == String {
+extension Localizable where Self.RawValue == String {
     var localized: String {
-        return NSLocalizedString(self.rawValue, tableName: nil, bundle: .main, value: self.rawValue, comment: "")
+        return NSLocalizedString(self.rawValue, comment: "")
     }
 }

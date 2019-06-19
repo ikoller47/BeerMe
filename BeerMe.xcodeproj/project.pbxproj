@@ -25,7 +25,7 @@
 		3C4EE0D422AB0ADC00F35DEF /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0D322AB0ADC00F35DEF /* JournalEntry.swift */; };
 		3C4EE0D622AC200900F35DEF /* JournalCreateCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0D522AC200900F35DEF /* JournalCreateCoordinatorProtocol.swift */; };
 		3C4EE0D822B03D9C00F35DEF /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0D722B03D9C00F35DEF /* Localizable.swift */; };
-		3C4EE0DB22B040A400F35DEF /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0DA22B040A400F35DEF /* LocalizableStrings.swift */; };
+		3C4EE0DB22B040A400F35DEF /* BeerMeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EE0DA22B040A400F35DEF /* BeerMeStrings.swift */; };
 		3C4EE0DD22B0418D00F35DEF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C4EE0DC22B0418D00F35DEF /* Localizable.strings */; };
 		3C6C619622A8D8AB005C2AA7 /* UIApplication+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C619522A8D8AB005C2AA7 /* UIApplication+Utils.swift */; };
 		3C6C619A22A9996F005C2AA7 /* JournalCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C619822A9996F005C2AA7 /* JournalCreateViewController.swift */; };
@@ -49,7 +49,6 @@
 		3CC2A10E229C5512009E9522 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC2A10D229C5512009E9522 /* ReactiveKit.framework */; };
 		3CC2A112229E1063009E9522 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A111229E1063009E9522 /* LocationManager.swift */; };
 		3CC2A115229E1837009E9522 /* Notifications+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A114229E1837009E9522 /* Notifications+Name.swift */; };
-		3CC2A117229E3C0D009E9522 /* HTTPHeaderFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A116229E3C0D009E9522 /* HTTPHeaderFields.swift */; };
 		3CC2A119229F6335009E9522 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A118229F6334009E9522 /* UIViewController+Utils.swift */; };
 		3CC2A121229F6DEB009E9522 /* TabBarMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A11F229F6DEB009E9522 /* TabBarMenuController.swift */; };
 		3CC2A122229F6DEB009E9522 /* TabBarMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2A120229F6DEB009E9522 /* TabBarMenuController.xib */; };
@@ -70,11 +69,26 @@
 		3CC2A14D22A4AEB9009E9522 /* UICollectionView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A14C22A4AEB9009E9522 /* UICollectionView+Utils.swift */; };
 		3CC2A15022A4B093009E9522 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A14E22A4B093009E9522 /* EntryCell.swift */; };
 		3CC2A15122A4B093009E9522 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2A14F22A4B093009E9522 /* EntryCell.xib */; };
-		3CC2A16322A58879009E9522 /* Sizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A16222A58878009E9522 /* Sizable.swift */; };
+		3CC2A16322A58879009E9522 /* ResizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2A16222A58878009E9522 /* ResizableView.swift */; };
 		3CCB8B60228A518A0047C609 /* BRServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB8B5F228A518A0047C609 /* BRServices.swift */; };
 		3CCB8B64228A58D20047C609 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCB8B63228A58D20047C609 /* Alamofire.framework */; };
 		3CD7006522B70B0700900FD3 /* BRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7006422B70B0700900FD3 /* BRViewModel.swift */; };
+		3CD7006F22B9646800900FD3 /* BeerMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7006E22B9646800900FD3 /* BeerMeTests.swift */; };
+		3CD7007722B964DF00900FD3 /* BRUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7007622B964DF00900FD3 /* BRUnitTest.swift */; };
+		3CD7007B22B9E2DB00900FD3 /* MockDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7007A22B9E2DB00900FD3 /* MockDataStore.swift */; };
+		3CD7007D22B9E45200900FD3 /* MockJournalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7007C22B9E45200900FD3 /* MockJournalCoordinator.swift */; };
+		3CD7007F22BA83C400900FD3 /* HTTPHeaderFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7007E22BA83C400900FD3 /* HTTPHeaderFields.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CD7007122B9646800900FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CAC34332288CA2B005826FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CAC343A2288CA2C005826FE;
+			remoteInfo = BeerMe;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3C4AD6FA2294F60A002188AD /* BreweryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryManager.swift; sourceTree = "<group>"; };
@@ -95,7 +109,7 @@
 		3C4EE0D322AB0ADC00F35DEF /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		3C4EE0D522AC200900F35DEF /* JournalCreateCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCreateCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		3C4EE0D722B03D9C00F35DEF /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
-		3C4EE0DA22B040A400F35DEF /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		3C4EE0DA22B040A400F35DEF /* BeerMeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerMeStrings.swift; sourceTree = "<group>"; };
 		3C4EE0DC22B0418D00F35DEF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3C6C619522A8D8AB005C2AA7 /* UIApplication+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Utils.swift"; sourceTree = "<group>"; };
 		3C6C619822A9996F005C2AA7 /* JournalCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCreateViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +135,6 @@
 		3CC2A10D229C5512009E9522 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
 		3CC2A111229E1063009E9522 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3CC2A114229E1837009E9522 /* Notifications+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notifications+Name.swift"; sourceTree = "<group>"; };
-		3CC2A116229E3C0D009E9522 /* HTTPHeaderFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTTPHeaderFields.swift; path = ../HTTPHeaderFields.swift; sourceTree = "<group>"; };
 		3CC2A118229F6334009E9522 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		3CC2A11F229F6DEB009E9522 /* TabBarMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarMenuController.swift; path = ../Base/TabBarMenuController.swift; sourceTree = "<group>"; };
 		3CC2A120229F6DEB009E9522 /* TabBarMenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TabBarMenuController.xib; path = ../Base/TabBarMenuController.xib; sourceTree = "<group>"; };
@@ -142,10 +155,17 @@
 		3CC2A14C22A4AEB9009E9522 /* UICollectionView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Utils.swift"; sourceTree = "<group>"; };
 		3CC2A14E22A4B093009E9522 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		3CC2A14F22A4B093009E9522 /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
-		3CC2A16222A58878009E9522 /* Sizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizable.swift; sourceTree = "<group>"; };
+		3CC2A16222A58878009E9522 /* ResizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableView.swift; sourceTree = "<group>"; };
 		3CCB8B5F228A518A0047C609 /* BRServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRServices.swift; sourceTree = "<group>"; };
 		3CCB8B63228A58D20047C609 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		3CD7006422B70B0700900FD3 /* BRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRViewModel.swift; sourceTree = "<group>"; };
+		3CD7006C22B9646800900FD3 /* BeerMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD7006E22B9646800900FD3 /* BeerMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerMeTests.swift; sourceTree = "<group>"; };
+		3CD7007022B9646800900FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CD7007622B964DF00900FD3 /* BRUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRUnitTest.swift; sourceTree = "<group>"; };
+		3CD7007A22B9E2DB00900FD3 /* MockDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataStore.swift; sourceTree = "<group>"; };
+		3CD7007C22B9E45200900FD3 /* MockJournalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJournalCoordinator.swift; sourceTree = "<group>"; };
+		3CD7007E22BA83C400900FD3 /* HTTPHeaderFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeaderFields.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +177,13 @@
 				3CCB8B64228A58D20047C609 /* Alamofire.framework in Frameworks */,
 				3CC2A10C229C550A009E9522 /* Differ.framework in Frameworks */,
 				3CC2A10E229C5512009E9522 /* ReactiveKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD7006922B9646800900FD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,13 +231,13 @@
 			path = TextFieldCell;
 			sourceTree = "<group>";
 		};
-		3C4EE0D922B03FD900F35DEF /* LocalizableStrings */ = {
+		3C4EE0D922B03FD900F35DEF /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				3C4EE0DA22B040A400F35DEF /* LocalizableStrings.swift */,
+				3C4EE0DA22B040A400F35DEF /* BeerMeStrings.swift */,
 				3C4EE0DC22B0418D00F35DEF /* Localizable.strings */,
 			);
-			path = LocalizableStrings;
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		3C6C618F22A610D5005C2AA7 /* Annotations */ = {
@@ -237,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				3CAC343D2288CA2C005826FE /* BeerMe */,
+				3CD7006D22B9646800900FD3 /* BeerMeTests */,
 				3CAC343C2288CA2C005826FE /* Products */,
 				3CCB8B62228A58D20047C609 /* Frameworks */,
 			);
@@ -246,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				3CAC343B2288CA2C005826FE /* BeerMe.app */,
+				3CD7006C22B9646800900FD3 /* BeerMeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,7 +333,7 @@
 			children = (
 				3CC2A14822A45DE8009E9522 /* ReusableView.swift */,
 				3CC2A14A22A47E14009E9522 /* NibLoadable.swift */,
-				3CC2A16222A58878009E9522 /* Sizable.swift */,
+				3CC2A16222A58878009E9522 /* ResizableView.swift */,
 				3C4EE0D722B03D9C00F35DEF /* Localizable.swift */,
 			);
 			path = Protocols;
@@ -406,7 +435,7 @@
 		3CC2A15222A4B29A009E9522 /* HTTPHeaderFields */ = {
 			isa = PBXGroup;
 			children = (
-				3CC2A116229E3C0D009E9522 /* HTTPHeaderFields.swift */,
+				3CD7007E22BA83C400900FD3 /* HTTPHeaderFields.swift */,
 			);
 			path = HTTPHeaderFields;
 			sourceTree = "<group>";
@@ -434,7 +463,7 @@
 		3CCB8B5A228A49290047C609 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				3C4EE0D922B03FD900F35DEF /* LocalizableStrings */,
+				3C4EE0D922B03FD900F35DEF /* Strings */,
 				3C4EE0B922AB013200F35DEF /* GroupedCell */,
 				3C4EE0BF22AB013200F35DEF /* TextFieldCell */,
 				3C4EE0B822AB013200F35DEF /* TextViewCell */,
@@ -463,6 +492,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3CD7006D22B9646800900FD3 /* BeerMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7007922B9CC7900900FD3 /* Mocks */,
+				3CD7007822B9CC4300900FD3 /* Tests */,
+				3CD7007022B9646800900FD3 /* Info.plist */,
+			);
+			path = BeerMeTests;
+			sourceTree = "<group>";
+		};
+		3CD7007822B9CC4300900FD3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7006E22B9646800900FD3 /* BeerMeTests.swift */,
+				3CD7007622B964DF00900FD3 /* BRUnitTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3CD7007922B9CC7900900FD3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7007A22B9E2DB00900FD3 /* MockDataStore.swift */,
+				3CD7007C22B9E45200900FD3 /* MockJournalCoordinator.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -484,18 +541,40 @@
 			productReference = 3CAC343B2288CA2C005826FE /* BeerMe.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3CD7006B22B9646800900FD3 /* BeerMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CD7007322B9646800900FD3 /* Build configuration list for PBXNativeTarget "BeerMeTests" */;
+			buildPhases = (
+				3CD7006822B9646800900FD3 /* Sources */,
+				3CD7006922B9646800900FD3 /* Frameworks */,
+				3CD7006A22B9646800900FD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CD7007222B9646800900FD3 /* PBXTargetDependency */,
+			);
+			name = BeerMeTests;
+			productName = BeerMeTests;
+			productReference = 3CD7006C22B9646800900FD3 /* BeerMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3CAC34332288CA2B005826FE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Sapphire;
 				TargetAttributes = {
 					3CAC343A2288CA2C005826FE = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					3CD7006B22B9646800900FD3 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 3CAC343A2288CA2C005826FE;
 					};
 				};
 			};
@@ -513,6 +592,7 @@
 			projectRoot = "";
 			targets = (
 				3CAC343A2288CA2C005826FE /* BeerMe */,
+				3CD7006B22B9646800900FD3 /* BeerMeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -534,6 +614,13 @@
 				3C4EE0C822AB020200F35DEF /* TextFieldCell.xib in Resources */,
 				3CAC34462288CA2F005826FE /* Assets.xcassets in Resources */,
 				3CAC34622288D592005826FE /* MapViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD7006A22B9646800900FD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +657,7 @@
 			files = (
 				3CC2A121229F6DEB009E9522 /* TabBarMenuController.swift in Sources */,
 				3CC2A14B22A47E14009E9522 /* NibLoadable.swift in Sources */,
+				3CD7007F22BA83C400900FD3 /* HTTPHeaderFields.swift in Sources */,
 				3CB49003228CF344002307C9 /* MapCoordinator.swift in Sources */,
 				3C4EE0D622AC200900F35DEF /* JournalCreateCoordinatorProtocol.swift in Sources */,
 				3CC2A112229E1063009E9522 /* LocationManager.swift in Sources */,
@@ -582,14 +670,13 @@
 				3CAC343F2288CA2C005826FE /* AppDelegate.swift in Sources */,
 				3C4EE0C122AB013200F35DEF /* GroupedFooterSection.swift in Sources */,
 				3C4EE0C022AB013200F35DEF /* GroupedCell.swift in Sources */,
-				3CC2A16322A58879009E9522 /* Sizable.swift in Sources */,
+				3CC2A16322A58879009E9522 /* ResizableView.swift in Sources */,
 				3CC2A129229F7FFF009E9522 /* TabBarMenuCoordinator.swift in Sources */,
 				3C4EE0D122AB021D00F35DEF /* TextViewCell.swift in Sources */,
 				3CAC34642288D5A1005826FE /* MapViewModel.swift in Sources */,
 				3C4EE0C722AB020200F35DEF /* TextFieldCell.swift in Sources */,
 				3C6C619A22A9996F005C2AA7 /* JournalCreateViewController.swift in Sources */,
 				3CC2A13A22A0C030009E9522 /* JournalViewModel.swift in Sources */,
-				3CC2A117229E3C0D009E9522 /* HTTPHeaderFields.swift in Sources */,
 				3CB4900E2291F8FB002307C9 /* Brewery.swift in Sources */,
 				3CC2A14922A45DE8009E9522 /* ReusableView.swift in Sources */,
 				3CC2A12B229F843F009E9522 /* TabBarMenuViewModel.swift in Sources */,
@@ -617,12 +704,31 @@
 				3CB4900A228E71D6002307C9 /* LocationServices.swift in Sources */,
 				3C4AD6FD2295B0D0002188AD /* MapLocationViewModel.swift in Sources */,
 				3CC2A13722A0C022009E9522 /* JournalViewController.swift in Sources */,
-				3C4EE0DB22B040A400F35DEF /* LocalizableStrings.swift in Sources */,
+				3C4EE0DB22B040A400F35DEF /* BeerMeStrings.swift in Sources */,
 				3CC2A115229E1837009E9522 /* Notifications+Name.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3CD7006822B9646800900FD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD7007D22B9E45200900FD3 /* MockJournalCoordinator.swift in Sources */,
+				3CD7006F22B9646800900FD3 /* BeerMeTests.swift in Sources */,
+				3CD7007B22B9E2DB00900FD3 /* MockDataStore.swift in Sources */,
+				3CD7007722B964DF00900FD3 /* BRUnitTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CD7007222B9646800900FD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CAC343A2288CA2C005826FE /* BeerMe */;
+			targetProxy = 3CD7007122B9646800900FD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3CAC34472288CA2F005826FE /* LaunchScreen.storyboard */ = {
@@ -796,6 +902,46 @@
 			};
 			name = Release;
 		};
+		3CD7007422B9646800900FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BeerMeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.BeerMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeerMe.app/BeerMe";
+			};
+			name = Debug;
+		};
+		3CD7007522B9646800900FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BeerMeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapphire.BeerMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeerMe.app/BeerMe";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -813,6 +959,15 @@
 			buildConfigurations = (
 				3CAC344E2288CA2F005826FE /* Debug */,
 				3CAC344F2288CA2F005826FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CD7007322B9646800900FD3 /* Build configuration list for PBXNativeTarget "BeerMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD7007422B9646800900FD3 /* Debug */,
+				3CD7007522B9646800900FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
