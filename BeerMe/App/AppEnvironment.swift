@@ -17,6 +17,8 @@ class AppEnvironment {
     let locationManager: LocationManager
     let dataStore: DataStore
     
+    // MARK: - Initialization
+    
     init(appSettings: AppSettings) {
         self.services = LocationServices(baseURL: appSettings.servicesURL, apiKey: appSettings.servicesAPIKey)
         self.breweryManager = BreweryManager(services: services)

@@ -17,8 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-
+        
+        #if DEBUG
+        let appSettings = AppSettings.staging
+        #else
         let appSettings = AppSettings.production
+        #endif
+        
         let appEnvironment = AppEnvironment(appSettings: appSettings)
         let appCoordinator = AppCoordinator(appEnvironment: appEnvironment, window: window)
         

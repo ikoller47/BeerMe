@@ -16,4 +16,9 @@ struct AppSettings {
         servicesURL: "https://api.yelp.com/v3/",
         servicesAPIKey:"xdBoN7Iz3fSPGBzWkSZzb9HV5E4Rxh8DK7Hmp2q7aKcJnArl-HBG53IzzBHHn951AcXKin3jaa_jaFfkN0LiIoI6vboiGUpRnpV1qdJXvS5P9agHaGKQD08x86DtXHYx"
     )
+    
+    static var staging = AppSettings(
+        servicesURL: "https://api.yelp.com/v3/",
+        servicesAPIKey:"xdBoN7Iz3fSPGBzWkSZzb9HV5E4Rxh8DK7Hmp2q7aKcJnArl-HBG53IzzBHHn951AcXKin3jaa_jaFfkN0LiIoI6vboiGUpRnpV1qdJXvS5P9agHaGKQD08x86DtXHYx"
+    )
 }
